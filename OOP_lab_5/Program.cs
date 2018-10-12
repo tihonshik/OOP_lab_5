@@ -14,6 +14,7 @@ namespace OOP_lab_5
         }
     }
 
+
     public abstract class Vehicle
     {
         protected bool isStarted;
@@ -109,14 +110,18 @@ namespace OOP_lab_5
     {
         static void Main(string[] args)
         {
-            Vehicle Train = new Train();
+            Vehicle Train_1 = new Train();
 
-            if (Train is Car)
+            if (Train_1 is Car)
             {
                 Console.WriteLine("Что-то не так");
             }
+            else
+            {
+                Console.WriteLine("Train is not a Car");
+            }
 
-            Printer.iAmPrinting(Train);
+            Printer.iAmPrinting(Train_1);
         }
     }
 }
